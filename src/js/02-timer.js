@@ -11,7 +11,7 @@ let addedDate = 0;
 
 startBtn.setAttribute('disabled', 'disabled');
 
-// const flatpickr = require('flatpickr').default;
+
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -32,6 +32,8 @@ const options = {
 function addLeadingZeros(num, totalLength) {
   return String(num).padStart(totalLength, '0');
 }
+
+flatpickr(inputDate, options);
 
 function startHandler() {
   const intervalFoo = setInterval(() => {
@@ -60,7 +62,7 @@ function startHandler() {
 
 startBtn.addEventListener('click', startHandler);
 
-flatpickr(inputDate, options);
+
 
 function convertMs(ms) {
   // Number of milliseconds per unit of time
